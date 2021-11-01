@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <ctype.h>
+
+bool isUpperCase(char c);
+
+int main (void) {
+	
+	for (char c = getchar(); c != EOF; c = getchar()) {
+		if (isUpperCase(c))
+			c = tolower(c);
+		putchar(c);
+	}
+
+	return 0;
+}
+
+bool isUpperCase(char c) {
+	if (c >= 'A' && c <= 'Z') 
+		return 1;
+	return 0;
+}
